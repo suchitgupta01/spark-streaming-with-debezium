@@ -1,0 +1,24 @@
+### STS ###
+**/project/target/**
+**/target/**
+checkpoint/**
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+*/out/**
+
+
+### Mac ###
+.DS_Store
+**/gradlew.bat
+
+### Common ###
+.gradle
+**/packages/**
+**/tomcat/**
+**/logs/**
+**/build/**
+**/bin/**
