@@ -8,8 +8,8 @@ object StreamingJob extends App with SparkSessionWrapper {
 
   val currentDirectory = new java.io.File(".").getCanonicalPath
   val kafkaReaderConfig = KafkaReaderConfig("localhost:29092", "dbserver1.inventory.orders")
-  val jdbCConfig = JDBCConfig(url = "jdbc:postgresql://localhost:5432/test")
-  new StreamingJobExecutor(spark, kafkaReaderConfig, currentDirectory + "/checkpoint/job", jdbCConfig).execute()
+  val jdbcConfig = JDBCConfig(url = "jdbc:postgresql://localhost:5432/test")
+  new StreamingJobExecutor(spark, kafkaReaderConfig, currentDirectory + "/checkpoint/job", jdbcConfig).execute()
 }
 
 case class JDBCConfig(url: String, user: String = "test", password: String = "Test123", tableName: String = "orders_it")
